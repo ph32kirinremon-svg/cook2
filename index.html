@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料理初心者アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🍳 料理サポート</h1>
+
+    <div id="homeScreen" class="container">
+        <h2>ある食材を入力</h2>
+
+        <input type="text" id="ingredientInput" placeholder="例：卵, ご飯, 玉ねぎ">
+
+        <button onclick="findRecipes()">
+            料理を探す
+        </button>
+
+        <div id="recipeResults"></div>
+    </div>
+
+    <div id="recipeDetail" class="hidden">
+        <h2 id="recipeTitle"></h2>
+
+        <button onclick="goBack()">
+            ← 戻る
+        </button>
+
+        <div class="step-box">
+            <h3>今やること</h3>
+
+            <p id="stepCount"></p>
+
+            <p id="stepText"></p>
+
+            <img id="stepImage" src="" alt="切り方画像">
+
+            <div class="tips">
+                💡 <span id="stepTip"></span>
+            </div>
+
+            <button class="next-btn" onclick="nextStep()">
+
+                次へ
+            </button>
+        </div>
+    </div>
+
+    <script src="recipes.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
