@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background: #f4f4f4;
+  background: #f4f4f49e;
   padding: 20px;
   margin: 0;
 }
@@ -33,6 +33,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .step-box {
@@ -132,4 +133,136 @@ button {
   padding: 18px;
   font-size: 22px;
   border-radius: 20px;
+}
+
+.favorite-btn {
+
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    color: gray;
+}
+
+.favorite-btn.active {
+
+    color: hotpink;
+}
+
+.have-title {
+    color: green;
+    font-weight: bold;
+}
+
+.missing-title {
+    color: red;
+    font-weight: bold;
+}
+
+.have-list {
+    color: green;
+}
+
+.missing-list {
+    color: red;
+}
+
+.ingredient-box {
+    margin-top: 10px;
+}
+
+/* 買い物リスト */
+#shoppingSection {
+  background: white;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.shopping-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+#shoppingInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.shopping-input button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: orange;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#shoppingList {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* レシピ追加 */
+#addRecipeSection {
+  background: white;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#addRecipeSection h2 {
+  margin-bottom: 10px;
+}
+
+#addRecipeSection input,
+#addRecipeSection textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#addRecipeSection textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#addRecipeSection button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
