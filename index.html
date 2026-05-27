@@ -10,21 +10,48 @@
 
 <body>
 
-    <h1>🍳 料理サポート</h1>
+    <h1>料理サポート</h1>
 
     <div id="homeScreen" class="container">
         <h2>ある食材を入力</h2>
 
-        <input type="text" id="ingredientInput" placeholder="例：卵, ご飯, 玉ねぎ">
+        <input type="text" id="search" placeholder="料理を検索">
 
-        <button onclick="findRecipes()">
-            料理を探す
+        <button onclick="searchRecipes()">
+            検索
+        </button>
+
+        <button onclick="showFavorites()">
+            ❤️ お気に入り一覧
         </button>
 
         <div id="recipeResults"></div>
+        <h2>🍳 おすすめレシピ</h2>
+
+        <div id="recommendedRecipes">
+        </div>
+
+        <!-- レシピ追加 -->
+        <div id="addRecipeSection">
+
+            <h2>🍳 レシピ追加</h2>
+
+            <input type="text" id="recipeName" placeholder="料理名">
+
+            <textarea id="recipeIngredients" placeholder="材料（1行ずつ入力）"></textarea>
+
+            <textarea id="recipeSteps" placeholder="手順（1行ずつ入力）"></textarea>
+
+            <button onclick="addRecipe()">
+                レシピを保存
+            </button>
+
+        </div>
+
     </div>
 
     <div id="recipeDetail" class="hidden">
+
         <h2 id="recipeTitle"></h2>
 
         <button onclick="goBack()">
@@ -32,6 +59,7 @@
         </button>
 
         <div class="step-box">
+
             <h3>今やること</h3>
 
             <p id="stepCount"></p>
@@ -45,10 +73,38 @@
             </div>
 
             <button class="next-btn" onclick="nextStep()">
-
                 次へ
             </button>
+
         </div>
+
+    </div>
+
+    <div id="favoriteScreen" class="hidden">
+
+        <h2>❤️ お気に入り一覧</h2>
+
+        <button onclick="goHome()">
+            ← ホームへ戻る
+        </button>
+
+        <div id="favoriteList"></div>
+
+    </div>
+
+    <!-- 買い物リスト -->
+    <div id="shoppingSection">
+        <h2>🛒 買い物リスト</h2>
+
+        <div class="shopping-input">
+            <input type="text" id="shoppingInput" placeholder="材料を入力" />
+
+            <button onclick="addShoppingItem()">
+                追加
+            </button>
+        </div>
+
+        <ul id="shoppingList"></ul>
     </div>
 
     <script src="recipes.js"></script>
